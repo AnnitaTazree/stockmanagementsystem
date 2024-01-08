@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Log In";
+}
+<section class="register-section d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-lg-5">
+                <div class="register-form">
+                    <form method="POST">
+                        <h1 class="form-title">Login</h1>
+                        @if (Model.errorMessage.Length > 0)
+                        {
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>@Model.errorMessage</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                            </div>
+                        }
+                        <div class="form-group">
+                            <label class="input-title" for="inputEmail">Email address</label>
+                            <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter email" value="@Model.info.email">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="input-title" for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" value="@Model.info.password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 text-uppercase mb-3">Log In</button>
+
+                        <!----   <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="checkRemember">
+                            <label class="form-check-label" for="checkRemember">Remember me?</label>
+                        </div>
+                       <div class="forget-password text-end">
+                            <a href="#!">Forgot Password?</a>
+                        </div>
+                        <div class="or-separator">
+                            <span>OR</span>
+                        </div>
+                        <ul class="social-links unordered-list-center">
+                            <li><a class="icon-google" href="#!"><i class="fab fa-google"></i></a></li> -->
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

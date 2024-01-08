@@ -1,0 +1,36 @@
+/*
+	*	Register Page - Start
+*/
+.register-section {
+	padding: 100px 0;
+	min-height: 100vh;
+}
+.or-separator {
+	margin: 58px 0;
+	position: relative;
+	border-top: 1px solid $color-border;
+	span {
+		left: 50%;
+		top: -18px;
+		color: #808080;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 22px;
+		padding: 6px 10px;
+		position: absolute;
+		display: inline-block;
+		transform: translateX(-50%);
+		border-radius: $border-radius;
+		background-color: $color-white;
+		border: 1px solid $color-border;
+	}
+}
+.form-bottom-text {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+	padding-top: 30px;
+}
+/*
+	*	Register Page - End
+*/

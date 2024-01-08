@@ -1,0 +1,51 @@
+/*
+	*	Social Media - Start
+*/
+.social-links {
+	margin: -6px;
+	>li {
+		padding: 6px;
+	}
+	a {
+		z-index: 1;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		color: $color-body;
+		position: relative;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $color-border;
+		&:hover {
+		}
+
+		&.icon-google {
+			color: #FF5C00;
+			border-color: #FF5C00;
+			&:hover {
+				color: $color-white;
+				background-color: #FF5C00;
+			}
+		}
+		&.icon-facebook {
+			color: #1D5CFF;
+			border-color: #1D5CFF;
+			&:hover {
+				color: $color-white;
+				background-color: #1D5CFF;
+			}
+		}
+		&.icon-linkedin {
+			color: #0059C1;
+			border-color: #0059C1;
+			&:hover {
+				color: $color-white;
+				background-color: #0059C1;
+			}
+		}
+	}
+}
+/*
+	*	Social Media - End
+*/

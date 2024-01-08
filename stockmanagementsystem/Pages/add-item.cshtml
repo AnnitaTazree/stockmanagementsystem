@@ -1,0 +1,142 @@
+﻿@page
+@model stockmanagementsystem.Pages.add_itemModel
+@{
+    ViewData["Title"] = "Add Item";
+}
+<!-- Body Wrap - Start -->
+<div class="page-wrapper">
+
+    <!-- Site Header - Start
+    ================================================== -->
+    <header class="site-header">
+        <div class="site-logo">
+            <a class="site-link" href="/index">
+                <img src="assets/images/logo/site_logo.svg" alt="Stock Management System">
+            </a>
+        </div>
+        <ul class="header-action-btns unordered-list-end">
+            <li>
+                <div class="dropdown">
+                    <button class="btn-notification" type="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownNotification">
+                        <a class="dropdown-item" href="/notifications">Notification</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn-admin dropdown-toggle" type="button" id="dropdownAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="admin-avatar">
+                            <img src="assets/images/admin/MTS.png" alt="Admin Avatar">
+                        </span>
+                        <span class="admin-name">MTS</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownAdmin">
+                        <a class="dropdown-item" href="/index">Log Out</a>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <!-- Site Header - End
+    ================================================== -->
+    <!-- Main Body - Start
+    ================================================== -->
+    <main class="page-content">
+
+        <!-- Dashboard Frame Section - Start
+        ================================================== -->
+        <section class="dashboard-frame">
+            <div class="dashboard-sidebar">
+                <ul class="dashboard-menu-list unordered-list-block">
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li class="active"><a href="/add-item">Add Item</a></li>
+                    <li><a href="/stock-in?ProductName=null">Stock In-Out</a></li>
+                    <li><a href="/stock-available?ProductName=null">Available Stock</a></li>
+                    <li><a href="/suppliers-info?Category=null">Suppliers</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                </ul>
+            </div>
+            <div class="dashboard-body">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="additem-form">
+                            <h2 class="form-title">Add Your Item</h2>
+                            @if (Model.errorMessage.Length > 0)
+                            {
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>@Model.errorMessage</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                                </div>
+                            }
+                            <form method="POST">
+                                <div class="form-group">
+                                    <label class="input-title" for="inputProductName">Product Name</label>
+                                    <input type="text" class="form-control" id="inputProductName" name="inputProductName" value="@Model.productInfo.productname">
+                                </div>
+                                <div class="form-group">
+                                    <label class="input-title" for="inputCategory">Category</label>
+                                    <input type="text" class="form-control" id="inputCategory" name="inputCategory" value="@Model.productInfo.category">
+                                </div>
+                                <div class="form-group">
+                                    <label class="input-title" for="inputQuantity">Quantity</label>
+                                    <input type="number" class="form-control" id="inputQuantity" name="inputQuantity" value="@Model.productInfo.quantity">
+                                </div>
+                                <div class="form-group">
+                                    <label class="input-title" for="inputIssuedDate">Issued Date</label>
+                                    <input type="datetime-local" class="form-control" id="inputIssuedDate" name="inputIssuedDate" value="@Model.productInfo.issued_date">
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="offset-sm-3 col-sm-3 d-grid">
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <div class="col-sm-3 d-grid">
+                                        <a class="btn btn-outline-primary" href="/add-item" role="button">Cancel</a>
+                                    </div>
+                                </div>
+                            </form>
+                            @if (Model.successMessage.Length > 0)
+                            {
+                                <div class="row mb-3">
+                                    <div class="col-sm-9">
+                                        <div class="alert alert-warning alert-dismissble fade show" role="alert">
+                                            <strong>@Model.successMessage</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Dashboard Frame Section - End
+        ================================================== -->
+
+    </main>
+    <!-- Main Body - End
+    ================================================== -->
+
+</div>
+<!-- Body Wrap - End -->
+<!-- Fraimwork - Jquery Include -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
+
+<!-- animation - jquery include -->
+<script src="assets/js/wow.min.js"></script>
+
+<!-- Carousel - Jquery Include -->
+<script src="assets/js/slick.min.js"></script>
+
+<!-- Chart - Jquery Include -->
+<script src="assets/js/chart.js"></script>
+
+<!-- Custom - Jquery Include -->
+<script src="assets/js/main.js"></script>

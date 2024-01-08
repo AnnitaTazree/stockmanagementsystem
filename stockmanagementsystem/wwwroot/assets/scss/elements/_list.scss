@@ -1,0 +1,44 @@
+/*
+  * Order & Unorder List - Start
+*/
+
+// List Default Style - Start
+.unordered-list,
+.unordered-list-end,
+.unordered-list-center {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  >li {
+    float: left;
+    list-style: none;
+    display: inline-block;
+  }
+}
+
+.unordered-list {
+  justify-content: flex-start;
+}
+.unordered-list-center {
+  justify-content: center;
+}
+.unordered-list-end {
+  justify-content: flex-end;
+}
+
+.unordered-list-block {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  >li {
+    display: block;
+    list-style: none;
+  }
+}
+// List Default Style - End
+
+/*
+  * Order & Unorder List - End
+*/

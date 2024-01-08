@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewData["Title"] - Stock Management System</title>
+
+    <!-- Fraimwork - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+
+    <!-- Icon Font - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/fontawesome.css">
+
+    <!-- Animation - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/animate.css">
+
+    <!-- Carousel - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/slick-theme.css">
+
+    <!-- Video & Image Popup - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/magnific-popup.css">
+
+    <!-- Custom - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/testin.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Stock Management System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/add-item">Add item</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="/stock-in?ProductName=null">Stock In-Out</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="/stock-available?ProductName=null">Stock Available</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="/suppliers-info?Category=null">Suppliers Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/settings">Settings</a>
+                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/notifications">Notifications</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="body-container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
+
+    <!-- animation - jquery include -->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!-- Carousel - Jquery Include -->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!-- Chart - Jquery Include -->
+    <script src="assets/js/chart.js"></script>
+
+    <!-- Custom - Jquery Include -->
+    <script src="assets/js/main.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

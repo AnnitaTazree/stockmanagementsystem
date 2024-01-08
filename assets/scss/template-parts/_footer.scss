@@ -1,0 +1,76 @@
+/* Site Footer - Start
+================================================== */
+.site_footer {
+	color: #C8C8C8;
+	margin-top: -130px;
+	background-color: $color-dark;
+	.site_logo {
+		margin-bottom: 35px;
+	}
+
+	.footer_widget_area {
+		padding: 250px 0 108px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 52px;
+	}
+
+	.footer_widget_title {
+		color: $color-white;
+	}
+
+	.page_list {
+		a {
+			color: $color-white;
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+
+	.blog_small {
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.04);
+		}
+		.item_image {
+			flex: 0 0 70px;
+			max-width: 70px;
+			margin-right: 10px;
+		}
+		.item_author {
+			display: none;
+		}
+		.item_title {
+			font-size: 16px;
+			color: $color-white;
+		}
+	}
+}
+
+.footer_widget_title {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 28px;
+	margin-bottom: 35px;
+}
+
+.copyright_widget {
+	.copyright_text {
+		padding: 40px 0;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		border-top: 1px solid #444444;
+		a {
+			color: #C8C8C8;
+			&:hover {
+				color: $color-white;
+			}
+		}
+	}
+}
+/* Site Footer - End
+================================================== */

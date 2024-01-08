@@ -1,0 +1,21 @@
+/*
+	*	Button Style - Start
+*/
+.btn {
+	outline: none;
+	font-size: 18px;
+	box-shadow: none;
+	font-weight: 600;
+	line-height: 22px;
+	padding: 19px 34px;
+	transition: $transition;
+	font-family: $font-heading;
+	border-radius: $border-radius;
+	&:focus {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+/*
+	*	Button Style - End
+*/

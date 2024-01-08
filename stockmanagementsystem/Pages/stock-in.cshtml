@@ -1,0 +1,180 @@
+﻿@page
+@model stockmanagementsystem.Pages.stock_inModel
+@{
+     ViewData["Title"] = "Stock IN";
+}
+<!-- Body Wrap - Start -->
+<div class="page-wrapper">
+
+    <!-- Site Header - Start
+    ================================================== -->
+    <header class="site-header">
+        <div class="site-logo">
+            <a class="site-link" href="/index">
+                <img src="assets/images/logo/site_logo.svg" alt="Stock Management System">
+            </a>
+        </div>
+        <ul class="header-action-btns unordered-list-end">
+            <li>
+                <div class="dropdown">
+                    <button class="btn-notification" type="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownNotification">
+                        <a class="dropdown-item" href="/notifications">Notification</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn-admin dropdown-toggle" type="button" id="dropdownAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="admin-avatar">
+                            <img src="assets/images/admin/MTS.png" alt="Admin Avatar">
+                        </span>
+                        <span class="admin-name">MTS</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownAdmin">
+                        <a class="dropdown-item" href="/index">Log Out</a>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <!-- Site Header - End
+    ================================================== -->
+    <!-- Main Body - Start
+    ================================================== -->
+    <main class="page-content">
+
+        <!-- Dashboard Frame Section - Start
+        ================================================== -->
+        <section class="dashboard-frame">
+            <div class="dashboard-sidebar">
+                <ul class="dashboard-menu-list unordered-list-block">
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/add-item">Add Item</a></li>
+                    <li class="active"><a href="/stock-in?ProductName=null">Stock In-Out</a></li>
+                    <li><a href="/stock-available?ProductName=null">Available Stock</a></li>
+                    <li><a href="/suppliers-info?Category=null">Suppliers</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                </ul>
+            </div>
+            <div class="dashboard-body">
+                <div class="stock-table-area">
+                    <form method="get">
+                        <div class="form-group suppliers-search">
+                            <input type="search" class="form-control" placeholder="Search by productname" name="productname" value="@Model.productname">
+                            <button type="submit" class="suppliers-search-btn">
+                                <i class="far fa-search"></i>
+                            </button>
+                        </div>
+                     </form>
+                        <ul class="form-inline unordered-list">
+                            <li>
+                                
+                            </li>
+                        </ul>
+                    
+
+                    @if (Model.errorMessage.Length > 0)
+                    {
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>@Model.errorMessage</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                        </div>
+                    }
+                    @if (Model.errorMessage.Length <= 0)
+                    {
+                        <div class="stock-table">
+                            <ul class="unordered-list teble-row">
+                                <li>
+                                    <div class="info-text-wrap bg-white">
+                                        <span class="info-text">
+                                            <strong>Product Name</strong>
+                                        </span>
+                                        <span class="info-text">
+                                            <strong>Product ID</strong>
+                                        </span>
+                                        <span class="info-text">
+                                            <strong>Category</strong>
+                                        </span>
+                                        <span class="info-text">
+                                            <strong>Quantity</strong>
+                                        </span>
+                                        <span class="info-text">
+                                            <strong>Issued Date</strong>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li><!-- Empty --></li>
+                            </ul>
+                            @foreach (var item in Model.listproducts)
+                            {
+                                <ul class="unordered-list teble-row">
+                                    <li>
+                                        <div class="info-text-wrap">
+                                            <span class="info-text">
+                                                <strong class="d-lg-none">Product Name</strong>
+                                                <small>@item.productname</small>
+                                            </span>
+                                            <span class="info-text">
+                                                <strong class="d-lg-none">Product ID</strong>
+                                                <small>@item.productid</small>
+                                            </span>
+                                            <span class="info-text">
+                                                <strong class="d-lg-none">Category</strong>
+                                                <small>@item.category</small>
+                                            </span>
+                                            <span class="info-text">
+                                                <strong class="d-lg-none">Quantity</strong>
+                                                <small>@item.quantity</small>
+                                            </span>
+                                            <span class="info-text">
+                                                <strong class="d-lg-none">Issued Date</strong>
+                                                <small>@item.issued_date</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <ul class="btns-group unordered-list">
+                                            <li><a class="btn btn-primary" href="/Edit?ProductId=@item.productid">Edit</a></li>
+                                            <li><a class="btn btn-primary" href="/add-item?ProductId=@item.productid">Insert</a></li>
+                                            <li><a class="btn btn-primary" href="/Withdraw?ProductId=@item.productid">Withdraw</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+        <!-- Dashboard Frame Section - End
+        ================================================== -->
+
+    </main>
+    <!-- Main Body - End
+    ================================================== -->
+
+</div>
+<!-- Body Wrap - End -->
+<!-- Fraimwork - Jquery Include -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
+
+<!-- animation - jquery include -->
+<script src="assets/js/wow.min.js"></script>
+
+<!-- Carousel - Jquery Include -->
+<script src="assets/js/slick.min.js"></script>
+
+<!-- Chart - Jquery Include -->
+<script src="assets/js/chart.js"></script>
+
+<!-- Custom - Jquery Include -->
+<script src="assets/js/main.js"></script>

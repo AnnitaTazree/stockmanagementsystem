@@ -1,0 +1,27 @@
+/*
+	*	Counter Widget - Start
+*/
+.counter-wrap {
+	margin: -15px -25px;
+	>li {
+		padding: 15px 25px;
+		text-align: center;
+	}
+	span {
+		display: block;
+		color: #808080;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 17px;
+		margin-bottom: 6px;
+	}
+	strong {
+		display: block;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 36px;
+	}
+}
+/*
+	*	Counter Widget - End
+*/

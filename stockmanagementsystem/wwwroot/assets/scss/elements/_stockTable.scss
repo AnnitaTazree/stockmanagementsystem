@@ -1,0 +1,63 @@
+/*
+	*	Stock Table - Start
+*/
+.stock-table {
+	.teble-row {
+		margin: -5px;
+		>li {
+			padding: 5px;
+			&:nth-child(1) {
+				flex: 1;
+			}
+			&:nth-child(2) {
+				flex: 0 0 30%;
+			}
+		}
+	}
+	.info-text-wrap {
+		display: flex;
+		align-items: center;
+		padding: 19px 20px 18px;
+		border-radius: $border-radius;
+		background-color: $color_light;
+		.info-text {
+			flex: 1;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+	.btns-group {
+		margin: -5px;
+		display: flex;
+		align-items: center;
+		>li {
+			padding: 5px;
+		}
+		button {
+			display: block;
+			font-size: 18px;
+			line-height: 22px;
+			padding: 18px 27px;
+			border-radius: $border-radius;
+			border: 1px solid $color_border;
+			&:hover {
+				color: $color_white;
+				border-color: $color_dark;
+				background-color: $color_dark;
+			}
+		}
+	}
+}
+
+.stock-out {
+	color: #FF0000;
+}
+.running-low {
+	color: #000000;
+}
+.stock-full {
+	color: #001AFF;
+}
+/*
+	*	Stock Table - End
+*/

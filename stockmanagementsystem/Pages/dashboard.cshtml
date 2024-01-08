@@ -1,0 +1,139 @@
+﻿@page
+@model stockmanagementsystem.Pages.dashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<!-- Body Wrap - Start -->
+<div class="page-wrapper">
+
+    <!-- Site Header - Start
+    ================================================== -->
+    <header class="site-header">
+        <div class="site-logo">
+            <a class="site-link" href="/index">
+                <img src="assets/images/logo/site_logo.svg" alt="Stock Management System">
+            </a>
+        </div>
+        <ul class="header-action-btns unordered-list-end">
+            <li>
+                <div class="dropdown">
+                    <button class="btn-notification" type="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownNotification">
+                        <a class="dropdown-item" href="/notifications">Notification</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn-admin dropdown-toggle" type="button" id="dropdownAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="admin-avatar">
+                            <img src="assets/images/admin/MTS.png" alt="Admin Avatar">
+                        </span>
+                        <span class="admin-name">MTS</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownAdmin">
+                        <a class="dropdown-item" href="/index">Log Out</a>
+                       
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <!-- Site Header - End
+    ================================================== -->
+    <!-- Main Body - Start
+    ================================================== -->
+    <main class="page-content">
+
+        <!-- Dashboard Frame Section - Start
+        ================================================== -->
+        <section class="dashboard-frame">
+            <div class="dashboard-sidebar">
+                <ul class="dashboard-menu-list unordered-list-block">
+                    <li class="active"><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/add-item">Add Item</a></li>
+                    <li><a href="/stock-in?ProductName=null">Stock In-Out</a></li>
+                    <li><a href="/stock-available?ProductName=null">Available Stock</a></li>
+                    <li><a href="/suppliers-info?Category=null">Suppliers</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                </ul>
+            </div>
+            <form method="get">
+
+            <div class="dashboard-body">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <div class="area-chart-wrapper">
+                            <h3 class="chart-title color-bg-success text-center text-white">Stock In</h3>
+                            <canvas id="chart-stock-in"></canvas>
+                            <!-- <img src="assets/images/stock-in.png" alt="Stock In Chart"> -->
+                        </div>
+                        <ul class="counter-wrap unordered-list">
+                            <li>
+                                    <div class="counter-text-wrap bg-white">
+                                     
+                                        <span class="counter-text">
+                                            <strong>Total Quantity Value</strong>
+                                        <span style="font-size:30px;color:violet;">@Model.Totalqntvalue.ToString()</span>
+
+                                        </span>
+                                        
+                                    </div>
+                            </li>
+                                <li><!-- Empty --></li>
+                        </ul>
+                    </div>
+                    <div class="col col-lg-6">
+                        <div class="area-chart-wrapper">
+                            <h3 class="chart-title color-bg-primary text-center text-white">Stock Out</h3>
+                            <canvas id="chart-stock-out"></canvas>
+                            <!-- <img src="assets/images/stock-out.png" alt="Stock Out Chart"> -->
+                        </div>
+
+                        <ul class="counter-wrap unordered-list">
+                            <li>
+                                <div class="counter-text-wrap bg-white">
+
+                                    <span class="counter-text">
+                                        <strong>Total product value</strong>
+                                        <span style="font-size:30px; color:violet">@Model.Totalpvalue</span>
+
+                                    </span>
+
+                                </div>
+                            </li>
+                            <li><!-- Empty --></li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+            </form>
+        </section>
+        <!-- Dashboard Frame Section - End
+        ================================================== -->
+
+    </main>
+    <!-- Main Body - End
+    ================================================== -->
+
+</div>
+<!-- Body Wrap - End -->
+<!-- Fraimwork - Jquery Include -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
+
+<!-- animation - jquery include -->
+<script src="assets/js/wow.min.js"></script>
+
+<!-- Carousel - Jquery Include -->
+<script src="assets/js/slick.min.js"></script>
+
+<!-- Chart - Jquery Include -->
+<script src="assets/js/chart.js"></script>
+
+<!-- Custom - Jquery Include -->
+<script src="assets/js/main.js"></script>

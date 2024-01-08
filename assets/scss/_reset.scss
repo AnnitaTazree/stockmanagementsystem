@@ -1,0 +1,135 @@
+/*
+	*	Template Global Reset - Start
+*/
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.65;
+	font-style: normal;
+	color: $color-body;
+	font-family: $font-body;
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+iframe {
+	border: none;
+}
+
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+textarea,
+textarea:hover,
+textarea:focus,
+textarea:active {
+	outline: none;
+}
+
+img:not([draggable]),
+embed,
+object,
+video {
+	height: auto;
+	max-width: 100%;
+}
+img {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	user-select: none;
+	vertical-align: middle;
+}
+
+a {
+	outline: 0;
+	display: inline-block;
+	text-decoration: none;
+	transition: $transition;
+	&:active,
+	&:focus,
+	&:hover,
+	&:visited {
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+button {
+	padding: 0px;
+	border: none;
+	outline: none;
+	background: none;
+	display: inline-block;
+	transition: $transition;
+	&:focus {
+		outline: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	color: $color-dark;
+	font-family: $font-heading;
+}
+
+hr {
+	opacity: 1;
+	margin: 25px 0;
+	background-color: $color-border;
+}
+
+.container {
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.row {
+	margin: -15px;
+}
+.col {
+	flex: unset;
+	padding: 15px;
+}
+
+.dropdown-menu {
+	border: none;
+	margin-top: 20px;
+	background-color: #ffffff;
+	border-radius: $border-radius;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+	animation: 0.1s ease-in-out 0s normal none 1 running fadeIn;
+
+	&:before {
+		left: 0;
+		right: 0;
+		top: -20px;
+		content: '';
+		height: 20px;
+		display: block;
+		position: absolute;
+	}
+}
+.dropdown-toggle::after {
+	margin: 0;
+	border: none;
+	line-height: 1;
+	content: '\f107';
+	font-weight: 400;
+	color: $color-black;
+	font-family: 'Font Awesome 5 Pro';
+}
+/*
+	*	Template Global Reset - End
+*/

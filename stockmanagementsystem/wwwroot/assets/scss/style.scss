@@ -1,0 +1,59 @@
+/* Table Of Content - start
+================================================== */
+/* 
+* Project Name   :  Stock Management System
+* File           :  CSS Base
+* Version        :  1.0.0
+* Last change    :  27 January 2023, Friday
+* Developed By   :	webrok (https://www.fiverr.com/webrok?up_rollout=true)
+
+==================================================
+
+1 - Template Global Settings
+	1.1 - Template Fonts
+	1.2 - Template Global Reset
+
+2 - Template Elements
+
+3 - Template Components
+
+4 - Responsive For Mobile & Tablet Devices
+
+*/
+/* Table Of Content - end
+================================================== */
+
+// Template Global Settings
+@import 'variable';
+@import 'fonts';
+@import 'mixin';
+@import 'reset';
+
+// Template Elements
+@import 'elements/color';
+@import 'elements/button';
+@import 'elements/list';
+@import 'elements/form';
+@import 'elements/addItem';
+@import 'elements/chart';
+@import 'elements/social';
+@import 'elements/counter';
+@import 'elements/stockTable';
+
+// Template Parts
+@import 'template-parts/header';
+// @import 'template-parts/footer';
+// @import 'template-parts/breadcrumb';
+// @import 'template-parts/sidebar';
+@import 'template-parts/dashboardFrame';
+
+// Template Components
+// @import 'components/banner';
+
+// Template Pages
+// @import 'templates/about';
+@import 'templates/admin';
+@import 'templates/register';
+
+// Template Responsive For Small Devices
+// @import 'responsive';
